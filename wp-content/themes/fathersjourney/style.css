@@ -1,0 +1,351 @@
+/*
+Theme Name: Fathers Journey Theme
+Author: William Harpley
+Author URI: http://fathers-journey.com/
+Description: Theme based on photography and blogging.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, white, dark, one-column, two-columns, left-sidebar, fluid-layout, responsive-layout, custom-menu, featured-images
+*/
+
+html {
+	height: 100%;
+}
+
+body {
+	position: relative;
+  margin: 0;
+	height: 100%;
+	background-color: #000;
+}
+
+h1 {
+	color: #fff;
+}
+
+.container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.columns {
+	margin-bottom: 30px;
+}
+
+/******************************
+					HEADER
+******************************/
+
+header {
+	height: 100px;
+}
+
+.site-name {
+  text-align: right;
+	font-size: 2em;
+}
+
+.site-name a {
+	color: #fff;
+}
+
+.site-name a:hover {
+	color: #7ba5cf;
+}
+
+.page-header {
+	color: #fff;
+}
+
+/******************************
+					NAVIGATION
+******************************/
+
+.top-head {
+	height: 50px;
+	display: block;
+}
+
+.site-name {
+	display: inline;
+	float: right;
+}
+
+.title-bar {
+	display: inline;
+	float: left;
+	background: transparent;
+}
+
+.nav-head {
+	display: block;
+	height: 50px;
+}
+
+.main-nav {
+	width: 500px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#collapse-menu {
+	display: block;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+}
+
+@media (max-width:640px) {
+
+	#collapse-menu {
+		display: inline-block;
+		float: left;
+		margin-bottom: 20px;
+	}
+
+}
+
+nav li {
+	display: inline-block;
+	padding: 20px;
+}
+
+a {
+	color: #7ba5cf;
+}
+
+a:hover {
+	color: #fff;
+}
+
+li a {
+	color: #7ba5cf;
+}
+
+@media (max-width:900px) {
+
+	nav li {
+		font-size: 10px;
+		padding: 5px;
+	}
+
+}
+
+/******************************
+					HOME PAGE
+******************************/
+
+#feature {
+	background-size: 100% 100%;
+	max-width: 100%;
+	height: 100%;
+	margin-top: 0;
+}	
+
+.wp-post-image {
+	height: 100%;
+	display: inline-block;
+}
+
+.overlay {
+	background: linear-gradient(
+    rgba(0, 0, 0, .65), 
+    rgba(0, 0, 0, 1)
+  );
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right:0;
+  top:0;
+  z-index: 1;
+  height: 120%;  
+}
+
+.home-header {
+	margin: 20px 20px;
+}
+
+.home-header a {
+	color: #7ba5cf;
+}
+
+.home-header a:hover {
+	color: #fff;
+}
+
+@media (max-width:900px) {
+
+	.current {
+		text-align: right;
+	}
+
+}
+
+.current a {
+	color: #fff;
+}
+
+.current a:hover {
+	color: #7ba5cf;
+}
+
+#featured-col {
+	float: left;
+}
+
+.intro {
+	width: 500px;
+	max-width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	color: #fff;
+	text-align: center;
+}
+
+/******************************
+						BLOG
+******************************/
+
+.primary  {
+	color: #fff;
+}
+
+/******************************
+				SINGLE BLOG
+******************************/
+
+.reading-col {
+	background-color: #fff;
+	padding: 20px 30px 40px;
+}
+
+.reading-col a:hover {
+	color: #012265;
+}
+
+.img-container {
+	margin-bottom: 30px;
+}
+
+/******************************
+				ABOUT PAGE
+******************************/
+
+.about-cont {
+	color: #fff;
+	margin-top: 30px;
+}
+
+/******************************
+			PORTFOLIO PAGE
+******************************/
+
+.portfolio-page {
+	margin-top: 20px;
+}
+
+.portfolio-page {
+}
+
+.orbit-caption {
+	text-align: center;
+}
+
+.orbit-bullets button.is-active{
+	background-color: #69c773;
+}
+
+.textwidget ul {
+	color: #69c773;
+}
+
+.menu li {
+	display: block;
+}
+
+#menu-project-menu {
+
+}
+
+.wptreehouse-badge {
+	/*display: none;*/
+}
+
+/******************************
+			SIDEBAR & WIDGETS
+******************************/
+
+.module-heading {
+	color: #fff;
+	font-size: 1.75em;
+}
+
+#home-side {
+	float: right;
+	background: linear-gradient(
+      rgba(72, 72, 72, 0.95), 
+      rgba(72, 72, 72, 0.95)
+    ),
+	url('http://localhost/fathers-journey/wp-content/themes/fathersjourney/img/steel-back.jpg');
+	background-size: 100% 100%;
+	height: 100%;
+	padding-bottom: 20px;
+}
+
+.widget label {
+	color: #fff;
+}
+
+ul {
+	color: #7ba5cf;
+}
+
+li a:hover {
+	color: #fff;
+}
+
+/******************************
+						ICONS
+******************************/
+
+.prev-next {
+	color: #fff;
+}
+
+[class*="fi-"] {
+	font-size: 2em;
+	padding: 10px;
+}
+
+@media (max-width:900px) {
+
+	[class*="fi-"] {
+		font-size: 1em;
+		padding: 2px;
+	}
+
+}
+
+/******************************
+						FOOTER
+******************************/
+
+footer {
+	display: block;
+	position: relative;
+	bottom: 0;
+	padding-bottom: 40px;
+	margin-top: 40px;
+	width: 100%;
+	height: 60px;
+	color: #fff;
+}
+
+
