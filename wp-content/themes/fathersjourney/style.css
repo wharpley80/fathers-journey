@@ -59,6 +59,11 @@ header {
 
 .page-header {
 	color: #fff;
+	margin-top: 20px;
+}
+
+#header-col {
+	margin-bottom: 0;
 }
 
 /******************************
@@ -156,7 +161,7 @@ li a {
 .overlay {
 	background: linear-gradient(
     rgba(0, 0, 0, .65), 
-    rgba(0, 0, 0, 1)
+    rgba(0, 0, 0, .9)
   );
   bottom: 0;
   left: 0;
@@ -234,6 +239,10 @@ li a {
 	margin-bottom: 30px;
 }
 
+.reading-col ul {
+	color: #000;
+}
+
 /******************************
 				ABOUT PAGE
 ******************************/
@@ -275,7 +284,7 @@ li a {
 }
 
 .wptreehouse-badge {
-	/*display: none;*/
+	display: none;
 }
 
 /******************************

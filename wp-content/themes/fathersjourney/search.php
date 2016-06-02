@@ -7,7 +7,6 @@
     </div>
     <div class="row">
       <div class="medium-9 columns">
-        
         <div class="primary">
 
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?> 

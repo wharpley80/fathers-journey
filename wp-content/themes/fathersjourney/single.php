@@ -8,6 +8,7 @@
     <div class="row">
       <div class="small-12 medium-9 columns">
         <div class="reading-col">
+          
 		    	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
               <p>

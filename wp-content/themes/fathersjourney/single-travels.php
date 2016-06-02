@@ -3,22 +3,23 @@
   <div class="small-12 columns">
     <div class="page-header">
       <div class="row">
-        <div class="small-9 columns">
-          <a href="<?php the_field('link'); ?>"><h2><?php wp_title(''); ?></h2></a>
+      <div class="row">
+        <div class="small-9 columns" id="header-col">
+          <h2><?php wp_title(''); ?></h2>
         </div>
-        <div class="small-3 columns prev-next">
-          <?php next_post_link('%link', '<span class="glyphicon glyphicon-circle-arrow-left"></span>'); ?>
-          <!-- Uses the id # of the Ballparks Page -->  
-          <a href="<?php bloginfo('url'); ?>/?p=58"><span class="glyphicon glyphicon-th"></span></a>
-          <?php previous_post_link('%link', '<span class="glyphicon glyphicon-circle-arrow-right"></span>'); ?>
+        <div class="small-3 columns prev-next" id="header-col">
+          <?php next_post_link('%link', '<i class="fi-arrow-left"></i>'); ?> 
+          <a href="<?php bloginfo('url'); ?>/?p=77"><i class="fi-thumbnails"></i></a>
+          <?php previous_post_link('%link', '<i class="fi-arrow-right"></i>'); ?>
         </div>
       </div>
-      
+      </div>    
       <hr>
     </div>
     <div class="row">
-      <div class="small-12 medium-9 columns ">
+      <div class="small-12 medium-9 columns">
         <div class="reading-col">
+
 		    	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
               <?php if ( get_the_post_thumbnail() ) : ?>
@@ -42,7 +43,7 @@
         </div>
       </div>
 
-      <?php get_sidebar('projects'); ?>
+      <?php get_sidebar(); ?>
 
 		</div>
 	</div>

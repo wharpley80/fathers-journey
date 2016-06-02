@@ -10,11 +10,7 @@ jQuery(document).ready(function($) {
 
 	$( '.show-badges' ).on( 'click', function(event) {
 		var link = $( '.show-badges' );
-		num = $('.wptreehouse-badge').length;
 
-		$('.wptreehouse-badge').toggle().each();
-		
-/*
 		$( '.wptreehouse-badge' ).toggle( 'fast', function() {
       if ($( '.wptreehouse-badge' ).is( ':visible' ))  {
            link.text( 'Hide Badges' );                
@@ -22,7 +18,7 @@ jQuery(document).ready(function($) {
            link.text( 'Show Badges' );                
       }        
     }); 
-*/
+
 	});
 	
 });
