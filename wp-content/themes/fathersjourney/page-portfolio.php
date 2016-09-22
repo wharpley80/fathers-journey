@@ -5,10 +5,12 @@
 ?>
 <?php get_header(); ?>
 
-  <div class="container">
+  <div class="container" id="port-cont">
     <div class="row">
       <div class="medium-12 columns portfolio-page" >
-        <h1><?php the_title(); ?></h1>
+        <div class="title-cont">
+          <h1><?php the_title(); ?><i class="fi-social-treehouse" id="treehouse-head"></i></h1>
+        </div>
         <hr>
         <div class="small-12 medium-9 columns" >
           <a href="http://localhost/fathers-journey/portfolio/projects/"><h3>Projects</h3></a>
@@ -69,7 +71,7 @@
       <div class="row">
         <div class="small-12 columns">
           <a class="show-badges">Show Badges</a>
-
+          <h3 class="tree-title"><i class="fi-social-treehouse" id="treehouse-foot"></i>Treehouse Badges</h3>
           <?php dynamic_sidebar('port-bottom'); ?>
           
           <a class="show-badges">Show Badges</a>

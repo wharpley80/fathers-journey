@@ -1,48 +1,60 @@
 <?php get_header(); ?>
-<div class="container">
-  <div class="small-12 columns">
-    <div class="page-header">
-      <div class="small-9 columns" id="header-col">
-        <a href="<?php the_field('link'); ?>"><h2><?php wp_title(''); ?></h2></a>
+
+  <div class="container">
+    <div class="small-12 columns">
+      <div class="page-header">
+        <div class="small-9 columns" id="header-col">
+          <a href="<?php the_field('link'); ?>"><h2><?php wp_title(''); ?></h2></a>
+        </div>
+        <div class="small-3 columns prev-next" id="header-col">
+          <?php next_post_link('%link', '<i class="fi-arrow-left"></i>'); ?> 
+          <a href="<?php bloginfo('url'); ?>/?p=69"><i class="fi-thumbnails"></i></a>
+          <?php previous_post_link('%link', '<i class="fi-arrow-right"></i>'); ?>
+        </div>
+        <hr>
       </div>
-      <div class="small-3 columns prev-next" id="header-col">
-        <?php next_post_link('%link', '<i class="fi-arrow-left"></i>'); ?> 
-        <a href="<?php bloginfo('url'); ?>/?p=69"><i class="fi-thumbnails"></i></a>
-        <?php previous_post_link('%link', '<i class="fi-arrow-right"></i>'); ?>
-      </div>
-      <hr>
-    </div>
-    <div class="row">
-      <div class="small-12 medium-9 columns ">
-        <div class="reading-col">
-          
-		    	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <div class="row">
+        <div class="small-12 medium-9 columns ">
+          <div class="reading-col">
+            
+  		    	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
               <?php if ( get_the_post_thumbnail() ) : ?>
-              <div class="img-container">
-                <a href="<?php the_field('link'); ?>"><?php the_post_thumbnail('large'); ?></a>
-              </div>
+
+                <div class="img-container">
+                  <a href="<?php the_field('link'); ?>"><?php the_post_thumbnail('large'); ?></a>
+                </div>
+                
               <?php endif; ?>
 
               <?php the_content(); ?>
+
+              <div class="code-cont">
+              
+                <a href="<?php the_field('source_code'); ?>">
+                  <img src="<?php bloginfo('template_directory'); ?>/img/githubmascot.png" class="git-chat">
+                </a>
+                <a href="<?php the_field('source_code'); ?>" class="projects-link">Source Code</a>
+              
+              </div>
 
               <hr>
 
               <?php comments_template(); ?>
 
-			    <?php endwhile; else : ?>
+  			    <?php endwhile; else : ?>
 
-						<p><?php _e( 'Sorry, no posts found.', 'fathersjourney' ); ?></p>
+  						<p><?php _e( 'Sorry, no posts found.', 'fathersjourney' ); ?></p>
 
-					<?php endif; ?>   
+  					<?php endif; ?>   
 
+          </div>
         </div>
-      </div>
 
-      <?php get_sidebar('projects'); ?>
+        <?php get_sidebar('projects'); ?>
 
-		</div>
-	</div>
-</div>
+  		</div>
+  	</div>
+  </div>
 
 <?php get_footer(); ?>

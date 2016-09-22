@@ -3,6 +3,7 @@
   Template Name: Travels Template
 */
 ?>
+
 <?php get_header(); ?>
 
   <div class="container">
@@ -15,12 +16,12 @@
 
             <?php
 
-            $args = array(
-              'post_type' => 'travels',
-              'category_name' => 'display'
-            );
+              $args = array(
+                'post_type' => 'travels',
+                'category_name' => 'display'
+              );
 
-            $the_query = new WP_Query($args);
+              $the_query = new WP_Query($args);
 
             ?>
 
@@ -64,13 +65,13 @@
 
             <?php
 
-            $args = array(
-              'post_type'     => 'travels'
-            );
+              $args = array(
+                'post_type'     => 'travels'
+              );
 
-            $the_query = new WP_Query($args);
+              $the_query = new WP_Query($args);
 
-          ?>
+            ?>
 
           <h2>Technical</h2>
           <hr>

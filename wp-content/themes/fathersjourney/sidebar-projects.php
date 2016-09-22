@@ -1,4 +1,4 @@
-<div class="medium-3 columns sidebar" id="home-side">
+<div class="medium-3 columns sidebar" id="projects-side">
 
 	<?php if (!dynamic_sidebar('projects')): ?>
 

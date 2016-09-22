@@ -21,8 +21,7 @@
 
         <?php if (  have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>  
 
-          <div>
-            
+          <div>     
             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <p>
             <span class="wpt-avatar small">

@@ -1,15 +1,16 @@
 <?php get_header(); ?>
-<div class="container">
-  <div class="small-12 columns">
-    <div class="page-header">
-      <h2><?php wp_title(''); ?></h2>
-      <hr>
-    </div>
-    <div class="row">
-      <div class="small-12 medium-9 columns">
-        <div class="reading-col">
-          
-		    	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+  <div class="container">
+    <div class="small-12 columns">
+      <div class="page-header">
+        <h2><?php wp_title(''); ?></h2>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="small-12 medium-9 columns">
+          <div class="reading-col">
+            
+  		    	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
               <p>
               <span class="wpt-avatar small">
@@ -33,19 +34,19 @@
 
               <?php comments_template(); ?>
 
-			    <?php endwhile; else : ?>
+  			    <?php endwhile; else : ?>
 
-						<p><?php _e( 'Sorry, no posts found.', 'fathersjourney' ); ?></p>
+  						<p><?php _e( 'Sorry, no posts found.', 'fathersjourney' ); ?></p>
 
-					<?php endif; ?>   
+  					<?php endif; ?>   
 
+          </div>
         </div>
-      </div>
-    
-      <?php get_sidebar(); ?>
+      
+        <?php get_sidebar(); ?>
 
-		</div>
-	</div>
-</div>
+  		</div>
+  	</div>
+  </div>
 
 <?php get_footer(); ?>

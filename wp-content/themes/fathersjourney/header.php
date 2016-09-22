@@ -8,36 +8,37 @@
     </title>
     <?php wp_head(); ?>
   </head>
-
-  <body>
-    <div class="container">
-    <header class="row no-max pad main">
-
-      <div class="top-head">
-        <div class="title-bar" data-responsive-toggle="collapse-menu" data-hide-for="medium">
-          <button class="menu-icon" type="button" data-toggle></button>
-          <div class="title-bar-title">Menu</div>
+  <body <?php body_class(); ?>> 
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-bar-title">
+          <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+            <button class="menu-icon dark" type="button" data-toggle></button>
+          </span>
+          <strong><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></strong>
         </div>
-        <h1 class="site-name"><a  href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+        <div id="responsive-menu">
+          <div class="top-bar-left">
+
+            <?php 
+              $defaults = array(
+                'container' => false,
+                'theme_location' => 'primary-menu',
+                'menu_class' => 'no-bullet',
+                'menu_class' => 'dropdown',
+                'menu_id' => 'responsive-menu'
+              );
+
+              wp_nav_menu( $defaults );
+            ?>
+
+          </div>
+          <div class="top-bar-right">
+
+            <?php get_search_form(); ?>
+
+          </div>
+        </div>
       </div>
-      <div class="nav-head">
-        <nav class="main-nav">
-   
-          <?php 
-
-            $defaults = array(
-              'container' => false,
-              'theme_location' => 'primary-menu',
-              'menu_class' => 'no-bullet',
-              'menu_id' => 'collapse-menu'
-            );
-
-            wp_nav_menu( $defaults );
-
-          ?>
-
-        </nav>
-      </div>
-
-    </header>
-    
+    </div>
+          
