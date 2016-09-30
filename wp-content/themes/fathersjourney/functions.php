@@ -47,6 +47,7 @@ function create_widget( $name, $id, $description ) {
 
 }
 
+// Allows comments on CPT(Travels)
 function default_comments_on( $data ) {
 
     if( $data[ 'post_type' ] == ( 'projects' || 'travels' ) ) {
@@ -58,6 +59,24 @@ function default_comments_on( $data ) {
 
 }
 add_filter( 'wp_insert_post_data', 'default_comments_on' );
+
+
+// Allows CPT(Travels) to be picked up by Category queries
+function custom_post_type_cat_filter($query) {
+  if ( !is_admin() && $query->is_main_query() ) {
+    if ($query->is_category()) {
+      $query->set( 'post_type', array( 'post', 'travels' ) );
+    }
+  }
+}
+add_action('pre_get_posts','custom_post_type_cat_filter');
+
+// Display CPT(Travels) in Recent Posts widget
+function wcs_cpt_recent_posts_widget( $params ) {
+    $params['post_type'] = array( 'travels' );
+    return $params;
+}
+add_filter( 'widget_posts_args', 'wcs_cpt_recent_posts_widget' );
 
 create_widget( 'Front Page Left', 'front-left', 'Displays on left of Homepage' );
 create_widget( 'Front Page Center', 'front-center', 'Displays in the center of Homepage' );
