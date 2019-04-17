@@ -32,7 +32,7 @@
               <div class="code-cont">
               
                 <a href="<?php the_field('source_code'); ?>">
-                  <img src="<?php bloginfo('template_directory'); ?>/img/githubmascot.png" class="git-chat">
+                  <img src="<?php bloginfo('template_directory'); ?>/img/githubmascot.jpg" class="git-chat">
                 </a>
                 <a href="<?php the_field('source_code'); ?>" class="projects-link">Source Code</a>
               

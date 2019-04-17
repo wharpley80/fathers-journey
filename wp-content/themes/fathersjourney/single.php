@@ -18,7 +18,7 @@
               </span>
                 by <?php the_author_posts_link(); ?>
                 on <?php echo the_time('l F jS, Y'); ?>
-                in <?php the_category(', '); ?>
+                in <?php the_category(', '); ?>,
                 <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
               </p>
 
