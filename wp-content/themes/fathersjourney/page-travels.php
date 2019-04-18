@@ -72,8 +72,7 @@
               $the_query = new WP_Query($args);
 
             ?>
-
-          <h2>Technical</h2>
+            
           <hr>
 
           <?php if (  have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); ?>  

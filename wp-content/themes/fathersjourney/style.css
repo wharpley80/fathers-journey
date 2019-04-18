@@ -340,10 +340,6 @@ strong a {
 	padding: 0 10px 0 10px;
 }
 
-.wptreehouse-badge {
-	display: none;
-}
-
 /******************************
 			PROJECTS
 ******************************/
@@ -381,7 +377,8 @@ strong a {
 	font-size: 1.75em;
 }
 
-#home-side {
+#home-side,
+#projects-side {
 	float: right;
 	background: linear-gradient(
       rgba(72, 72, 72, 0.95), 
@@ -391,6 +388,14 @@ strong a {
 	background-size: 100% 100%;
 	height: 100%;
 	padding-bottom: 20px;
+}
+
+#projects-side .menu-item a {
+	color: #2199e8;
+}
+
+#projects-side .menu-item a:hover {
+	color: #fff;
 }
 
 .widget label {

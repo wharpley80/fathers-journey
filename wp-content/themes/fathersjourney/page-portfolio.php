@@ -70,11 +70,8 @@
 
       <div class="row">
         <div class="small-12 columns">
-          <a class="show-badges">Show Badges</a>
-          <h3 class="tree-title"><i class="fi-social-treehouse" id="treehouse-foot"></i>Treehouse Badges</h3>
+          <h3 class="tree-title"><i class="fi-social-treehouse" id="treehouse-foot"></i>Recent Treehouse Badges</h3>
           <?php dynamic_sidebar('port-bottom'); ?>
-          
-          <a class="show-badges">Show Badges</a>
         </div>
       </div>
 
