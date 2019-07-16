@@ -13,7 +13,7 @@
         </div>
         <hr>
         <div class="small-12 medium-9 columns" >
-          <a href="http://localhost/fathers-journey/portfolio/projects/"><h3>Projects</h3></a>
+          <a href="http://the-rubber-duck.com/portfolio/projects/"><h3>Projects</h3></a>
 
           <?php
 
